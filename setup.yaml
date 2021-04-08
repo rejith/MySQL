@@ -13,7 +13,7 @@ databases:
   
 acl:
   - database: springboot_web
-    user: springboot_web
+    user: springboot-web
     access: ALL 
   - database: wordpress
     user: wordpress
