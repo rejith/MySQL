@@ -1,5 +1,9 @@
 
 users:
+   - name: springboot-web
+    password: $MYSQL_SPRINGBOOTWEB_PASSWORD
+  - name: wordpress
+    password: $MYSQL_WORDPRESS_PASSWORD
   - name: rejith
     password: $MYSQL_REJITH_PASSWORD
     
@@ -9,9 +13,15 @@ databases:
   
 acl:
   - database: springboot_web
-    user: rejith
-    access: SELECT,SHOW VIEW 
+    user: springboot_web
+    access: ALL 
   - database: wordpress
+    user: wordpress
+    access: ALL
+  - database: wordpress
+    user: rejith
+    access: SELECT,SHOW VIEW
+  - database: springboot_web
     user: rejith
     access: SELECT,SHOW VIEW
     
